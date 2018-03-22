@@ -65,4 +65,10 @@ public class TestSpecificNumberFinder {
 		assertEquals(false, specificNumberFinder.contains(200, listCustumFiles));
 	}
 
+	@Test
+	public void testContainsFalse2() {
+		List<CustomNumberEntity> listCustumFiles = specificNumberFinder
+				.readFromFile(System.getProperty("user.dir") + "/FileTestOk.txt");
+		assertEquals(false, specificNumberFinder.contains(400, listCustumFiles));
+	}
 }
